@@ -1,0 +1,473 @@
+<!DOCTYPE html">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title></title>
+  
+  
+  
+<style type="text/css">
+body {
+  margin: Oem;
+  padding: Oem;
+  font-family: Arial;
+  background-color: #ccfadc;
+  background-position: center;
+  padding: 10%;
+}
+
+.imgapple {
+  height: 100%;
+  float: left;
+}
+
+  .imgapple-titre {
+  width: 6%;
+  float: left;
+}
+
+.imgcolonnedroite{
+  margin-top: 10%;
+  margin-left: 2%;
+  float: left;
+
+}
+
+
+.haut {
+  background-position: center;
+  background-color: #FFF;
+
+  height: 50vh;
+
+  
+}
+
+.milieu {
+background-color: FFFFFF;
+  height: 80vh;
+  z-index: -10;
+  display: inline-table;
+}
+
+.menu {
+  height: 5vh;
+  background-image: url("bg_menu.gif");
+  background-size: 300px 69px;
+  box-shadow: 1px 5px 12px grey;
+z-index: 10;
+color: #FFF;
+font-size: 1.5em;
+}
+
+.menu a {
+  color: #FFF;
+width: 30px;
+
+margin-left: 2%;
+margin-right: 2%;
+text-decoration: none;
+}
+
+
+
+.articlecontainer{
+height: 100%;
+}
+
+.article, .sous-article {
+  padding: 5%;
+  margin-left: 10%;
+  text-align: justify;
+}
+
+.sous-article {
+  margin-left: 5%%;
+}
+
+
+.article p::first-letter {
+  margin-left:4%;
+}
+
+.article-titre {
+  box-sizing:border-box;
+}
+
+header {
+  text-align: justify;
+  color: mediumslateblue
+}
+
+
+/*** Menu deroulant sticky ****/
+/*
+nav {
+  width: 100%;
+  position: sticky;
+}
+nav ul {
+  list-style-type: none;
+}
+
+nav ul::after {
+content: "";
+display: table;
+clear: both;
+}
+
+nav ul li {
+  width: 25%;
+  float: left;
+text-align: center;
+position: relative;
+}
+
+
+nav > ul li:hover .sous-menu-deroulant{
+  display: block;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;  
+}
+
+nav a:hover {
+  color: #99BB22;
+  border-bottom: 2px solid transparent;
+}
+
+.menu-deroulant{
+
+}
+
+.sous-menu-deroulant{
+  display: none;
+  box-shadow: 0px 1px 2 #6d8b00;
+  background-color: #99BB22;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+
+
+.sous-menu-deroulant li{
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sous-menu-deroulant a{ 
+  padding: 10 px;
+  border-bottom: none;
+}
+
+.sous-menu-deroulant a hover{ 
+  padding: 10 px;
+  border-bottom: none;
+  background-color: #6d8B00;
+}
+
+.menu-deroulant > a::after{
+
+} 
+*/
+
+
+/*** VERSION MENU ORIGINAL ****/
+
+/*
+nav{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -3%;
+    position: sticky;
+    top: 0px;
+
+    height: 5vh;
+  background-image: url("bg_menu.gif");
+  background-size: 300px 69px;
+  box-shadow: 1px 5px 12px grey;
+  }
+
+nav ul{
+    list-style-type: none;
+    display:flex;
+  width: 80%;
+  line-height: 10%;
+  margin-top: 3%;
+  
+}
+}
+
+nav ul li{
+  float: left; 
+  width: 25%;
+  text-align: center;
+  height: 20%;
+}
+
+
+nav ul::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+    width: 7em;
+}
+
+nav a:hover{
+  display:block;
+    color: #2f3d00;
+    border-bottom: 2px solid #2f3d00;
+    
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: #99BB22;
+    width: 100%;
+    z-index: 1000;
+}
+.sous ul{
+  margin-left: -5%;
+}
+nav > ul li:hover .sous{
+    display: inline-block;
+    width: 50%;
+    border: 2px solid black;
+}
+
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+  }
+  .sous a:hover{
+    border-bottom: none;
+    background-color: #d9f37b;
+    width:5%;
+    margin-left: -46%;
+}
+.deroulant > a::after{
+    font-size: 12px;
+}
+
+*/
+
+.conteneur{
+  margin: 50px 20px;
+  height: 1500px;
+}
+
+
+
+
+
+
+
+h2{
+  font-weight: 200;
+  color: #99BB22;
+}
+
+p {
+  position: relative;
+}
+
+hr {
+  color: #99BB22;
+  border-color: #99BB22;
+}
+
+</style>
+
+</head>
+<body>
+
+
+  <header class="haut">
+    <img class="imgapple" src="apple.jpg" >
+    <h1>Colored Design</h1>
+  </header>
+  <div>
+    <!-- Nav fixe -->
+      <nav class="menu"> 
+      <a href="#Etape N°1">Etape n°1  </a>
+      |
+      <a href="#Etape N°2">Etape n°2  </a>
+      |
+      <a href="#Etape N°3">Etape n°3  </a>
+      |
+      <a href="#Etape N°4">Etape n°4  </a>
+      |
+      <a href="#Etape N°5">Etape n°5  </a>
+      |
+      
+    </nav>
+  <!-- Fin nav fixe --> 
+<!--
+  <nav class="menu"> 
+    <nav>
+      <ul>
+        <li class="menu-deroulant">
+          <a href="#">Etape n°1</a>
+          <ul class="sous-menu">
+            <li><a href="#">1111111</a></li>
+            <li><a href="#">2222222</a></li>
+            <li><a href="#">3333333</a></li>
+          </ul>
+        </li>
+        <li class="menu-deroulant">
+          <a href="#">Etape n°2</a>
+          <ul class="sous-menu">
+            <li><a href="#">SpaceX</a></li>
+            <li><a href="#">Codeur.com</a></li>
+          </ul>
+        </li>
+        <li><a href="#">À Etape n°3</a></li>
+        <li><a href="#">Etape n°4</a></li>
+        <li><a href="#">Etape n°5</a></li>
+      </ul>
+    </nav>
+    
+  </nav>
+-->
+
+<!--
+<nav>
+  <ul>
+    <li class="deroulant"><a href="#">Etape n°1 &ensp;|</a>
+      <ul class="sous">
+        <li><a href="#">1111111</a></li>
+        <li><a href="#">1111111</a></li>
+        <li><a href="#">1111111</a></li>
+      </ul>
+    </li>
+    <li class="deroulant"><a href="#">Etape n°2 &ensp;|</a>
+      <ul class="sous">
+        <li><a href="#">2222222</a></li>
+        <li><a href="#">2222222</a></li>
+        <li><a href="#">2222222</a></li>
+      </ul>
+    <li class="deroulant"><a href="#">Etape n°2 &ensp;|</a>
+      <ul class="sous">
+        <li><a href="#">3333333</a></li>
+        <li><a href="#">3333333</a></li>
+        <li><a href="#">3333333</a></li>
+      </ul>
+    <li class="deroulant"><a href="#">Etape n°2 &ensp;|</a>
+      <ul class="sous">
+        <li><a href="#">4444444</a></li>
+        <li><a href="#">4444444</a></li>
+        <li><a href="#">4444444</a></li>
+      </ul>
+    <li class="deroulant"><a href="#">Etape n°2 &ensp;|</a>
+      <ul class="sous">
+        <li><a href="#">5555555</a></li>
+        <li><a href="#">5555555</a></li>
+        <li><a href="#">5555555</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+-->
+
+
+  </div>
+    
+  
+  <section class="milieu">
+
+    <aside>
+      <img class="imgcolonnedroite" src="bg_page.gif"> 
+    </aside>
+
+
+    <div class="articlecontainer">
+      
+      <article class="article">
+        
+        <div class="article-titre">
+          <img class="imgapple-titre" src="apple.jpg" >
+           <h2>Titre de page, d'article ...</h2>
+           <hr></hr>
+           <div>
+             <br>
+             <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, dolor, rem tempore nemo libero itaque optio inventore, quasi ex cumque obcaecati nihil accusantium suscipit. Ducimus vel dolorum distinctio voluptates beatae reprehenderit iusto alias consequatur tempore aliquam adipisci fuga, rerum ad delectus laudantium quisquam totam. At, numquam! Nam, quo ipsum nobis iusto animi pariatur eum quisquam possimus. Tenetur molestias, non assumenda velit nam nemo laborum nobis, temporibus, maiores iste minima tempora labore earum numquam ratione sequi dolore molestiae. Libero illum impedit earum? Mollitia ipsam, illo animi perspiciatis, doloribus hic molestiae magni placeat nisi recusandae veritatis. Eveniet amet deserunt earum molestias expedita fugiat minus quaerat quibusdam voluptate ratione nisi consequatur enim sequi, labore magnam. Repudiandae minima corporis officiis, dolore natus quaerat provident!</p>
+            </article>
+            
+            
+      <article class="article">
+        <div class="article-titre">
+          <img class="imgapple-titre" src="apple.jpg" >
+            <h2>Titre de page, d'article ...</h2>
+              <hr></hr>
+        </div>
+        <br>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsum quas ea, facilis doloribus porro tempore impedit! Voluptatem et delectus consectetur nesciunt maiores ratione a, ut esse voluptas culpa facere quam, odit illo? Doloribus ipsum doloremque facere quas ducimus debitis nam magni, nobis hic ipsam architecto, labore officiis accusamus? Nobis dignissimos veritatis reiciendis maiores, maxime est magnam aut voluptas commodi dolor nesciunt, nemo, nulla inventore. Magnam eius sint aspernatur rem laborum voluptate reiciendis eaque ratione vel temporibus! Ipsum asperiores aspernatur nisi tenetur reprehenderit vel minus similique numquam voluptate architecto, voluptas odit dicta fugit assumenda obcaecati dolores explicabo quo perferendis amet soluta voluptatem necessitatibus consequatur tempore. Quas animi non facere impedit omnis voluptate quos ratione iste atque itaque laudantium, pariatur molestias.</p>
+      
+      
+        <article class="sous-article">
+          <div class="article-titre">
+            <img class="imgapple-titre" src="apple.jpg" >
+              <h2>Sous article ...</h2>
+                <hr></hr>
+          </div>
+          <br>
+          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsum quas ea, facilis doloribus porro tempore impedit! Voluptatem et delectus consectetur nesciunt maiores ratione a, ut esse voluptas culpa facere quam, odit illo? Doloribus ipsum doloremque facere quas ducimus debitis nam magni, nobis hic ipsam architecto, labore officiis accusamus? Nobis dignissimos veritatis reiciendis maiores, maxime est magnam aut voluptas commodi dolor nesciunt, nemo, nulla inventore. Magnam eius sint aspernatur rem laborum voluptate reiciendis eaque ratione vel temporibus! Ipsum asperiores aspernatur nisi tenetur reprehenderit vel minus similique numquam voluptate architecto, voluptas odit dicta fugit assumenda obcaecati dolores explicabo quo perferendis amet soluta voluptatem necessitatibus consequatur tempore. Quas animi non facere impedit omnis voluptate quos ratione iste atque itaque laudantium, pariatur molestias.</p>
+        </article>
+      
+      
+      </article>
+
+    
+
+      <article class="article">
+        <div class="article-titre">
+          <img class="imgapple-titre" src="apple.jpg" >
+            <h2>Titre de page, d'article ...</h2>
+              <hr></hr>
+        </div>
+        <br>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsum quas ea, facilis doloribus porro tempore impedit! Voluptatem et delectus consectetur nesciunt maiores ratione a, ut esse voluptas culpa facere quam, odit illo? Doloribus ipsum doloremque facere quas ducimus debitis nam magni, nobis hic ipsam architecto, labore officiis accusamus? Nobis dignissimos veritatis reiciendis maiores, maxime est magnam aut voluptas commodi dolor nesciunt, nemo, nulla inventore. Magnam eius sint aspernatur rem laborum voluptate reiciendis eaque ratione vel temporibus! Ipsum asperiores aspernatur nisi tenetur reprehenderit vel minus similique numquam voluptate architecto, voluptas odit dicta fugit assumenda obcaecati dolores explicabo quo perferendis amet soluta voluptatem necessitatibus consequatur tempore. Quas animi non facere impedit omnis voluptate quos ratione iste atque itaque laudantium, pariatur molestias.</p>
+      
+      
+        <article class="sous-article">
+          <div class="article-titre">
+            <img class="imgapple-titre" src="apple.jpg" >
+              <h2>Sous article ...</h2>
+                <hr></hr>
+          </div>
+          <br>
+          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsum quas ea, facilis doloribus porro tempore impedit! Voluptatem et delectus consectetur nesciunt maiores ratione a, ut esse voluptas culpa facere quam, odit illo? Doloribus ipsum doloremque facere quas ducimus debitis nam magni, nobis hic ipsam architecto, labore officiis accusamus? Nobis dignissimos veritatis reiciendis maiores, maxime est magnam aut voluptas commodi dolor nesciunt, nemo, nulla inventore. Magnam eius sint aspernatur rem laborum voluptate reiciendis eaque ratione vel temporibus! Ipsum asperiores aspernatur nisi tenetur reprehenderit vel minus similique numquam voluptate architecto, voluptas odit dicta fugit assumenda obcaecati dolores explicabo quo perferendis amet soluta voluptatem necessitatibus consequatur tempore. Quas animi non facere impedit omnis voluptate quos ratione iste atque itaque laudantium, pariatur molestias.</p>
+        </article>
+      </article>
+
+    </div>
+      
+
+
+    </section>
+
+
+
+</body>
+</html>
